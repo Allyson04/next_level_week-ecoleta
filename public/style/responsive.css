@@ -1,0 +1,38 @@
+@media (max-width: 700px){
+	#page-home{
+		background-position: 70vw;
+	}
+	#page-home main{
+		display: flex;
+		align-items: center;
+		text-align: center;
+	}
+
+	#page-home header a{
+		position: absolute;
+		bottom: -20px;
+		left: 50%;
+		transform: translateX( -50%);
+	}
+
+	#page-home main a{
+		align-items: center;
+	}
+
+	#page-home header img{
+		display: flex;
+		align-items: center;
+	}
+}
+
+@media (min-width: 1700px){
+	#page-home{ 
+		background-position-x: 40vw;
+	}
+}
+
+@media (max-height: 625px){
+	#page-home{
+		background-position-y: 20vh;
+	}
+}

@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+
+{% set pageId="page-search-results"%}
+
+{% block title %}
+
+  <title>Resultado da Pesquisa</title>
+
+{% endblock title %}
+
+{% block styles %}
+
+  <link rel="stylesheet" href="style/search-results.css">
+
+{% endblock styles %}
+
+{# id="page-home"> #}
+
+{% block content %}
+
+  <div class="content">
+
+    {% include "partials/page-header.html" %}
+
+    <main>
+
+      <h4>
+
+        <strong>2 Pontos</strong>
+        Encontrados
+
+      </h4>
+
+      <div class="cards">
+
+          {{ places }}
+
+        {% for place in places %}
+
+            <div class="card">
+                <img src="{{ place.image }}" alt="{{ place.image }}">
+                <h1>{{ place.name }}</h1>
+                <h3>{{ place.items }}</h3>
+                <p>
+                    {{ place.city }}, {{ place.state }}
+                    <br/>
+                    {{ place.address }}
+                    <br/>
+                    {{ place.address2 }}
+                </p>
+            </div>
+
+            {% endfor %}
+        
+
+        {# <div class="card">
+
+          <img src="https://images.unsplash.com/photo-1528323273322-d81458248d40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=801&q=80" alt="Papersider">
+
+          <h1>Papersider</h1>
+
+          <h3>Resíduos Eletrônicos, lâmpadas</h3>
+
+          <p>
+
+            Rio do Sul, Santa Catarina
+            <br/>
+
+            Guilherme Gemballa, Jardim América
+            <br/>
+
+            Número 260
+
+          </p>
+
+        </div> #}
+
+      </div>
+
+    </main>
+
+  </div>
+{% endblock content %}
